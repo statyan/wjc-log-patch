@@ -31,6 +31,8 @@ logger.unmute()
 ```
 ##Whats new
 
+v0.0.3:
+- Fixed missed import of util module
 v0.0.2:
 - Fixed converting object to strings to display in log
 
