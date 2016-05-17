@@ -36,13 +36,21 @@ function patchConsoleMethod(methodName) {
             return;
         }
         var args = [];
-        args.push('[%s] [%s] ' + arguments[0]);
+        args.push('[%s] [%s] ' + stringify(arguments[0]));
         args.push(getFormattedNow());
         args.push(methodName.toUpperCase());
         for(var i = 1; i < arguments.length; i++) {
-            args.push(arguments[i]);
+            args.push(stringify(arguments[i]));
         }
         nativeMethod.apply(console, args);
+    }
+}
+
+function stringify(value) {
+    if (typeof value == 'object') {
+        return util.inspect(value, {showHidden: false, depth: null});
+    } else {
+        return value;
     }
 }
 
