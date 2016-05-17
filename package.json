@@ -1,6 +1,6 @@
 {
 	"name": "wjc-log-patch",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Simple NodeJS console log patcher. Adds timestamp to all log messages and makes it possible to silent any level of log - info, log, warn, error (or do a total log mute)",
 	"main": "index.js",
 	"scripts": {
