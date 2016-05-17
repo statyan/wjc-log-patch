@@ -1,3 +1,5 @@
+var util = require('util');
+
 function Logger() {
 
     this.levels = {
